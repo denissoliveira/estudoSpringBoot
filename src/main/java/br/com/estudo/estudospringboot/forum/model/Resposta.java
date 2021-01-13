@@ -2,13 +2,24 @@ package br.com.estudo.estudospringboot.forum.model;
 
 import java.time.LocalDateTime;
 
-public class Resposta {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
+@Entity
+public class Resposta {
+	
+	public Resposta() {
+	}
+
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String mensagem;
-	private Topico topico;
+	@ManyToOne private Topico topico;
 	private LocalDateTime dataCriacao = LocalDateTime.now();
-	private Usuario autor;
+	@ManyToOne private Usuario autor;
 	private Boolean solucao = false;
 
 	@Override

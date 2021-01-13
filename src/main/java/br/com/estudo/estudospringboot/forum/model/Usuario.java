@@ -1,7 +1,17 @@
 package br.com.estudo.estudospringboot.forum.model;
 
-public class Usuario {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
+public class Usuario {
+	
+	public Usuario() {
+	}
+
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
 	private String email;
