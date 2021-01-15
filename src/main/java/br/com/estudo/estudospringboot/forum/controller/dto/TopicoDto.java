@@ -1,6 +1,8 @@
 package br.com.estudo.estudospringboot.forum.controller.dto;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import br.com.estudo.estudospringboot.forum.model.Topico;
 
@@ -57,6 +59,10 @@ public class TopicoDto {
 
 	public void setDataCriacao(LocalDateTime dataCriacao) {
 		this.dataCriacao = dataCriacao;
+	}
+	
+	public static List<TopicoDto> converter(List<Topico> topicos) {
+		return topicos.stream().map(TopicoDto::new).collect(Collectors.toList());
 	}
 	
 }

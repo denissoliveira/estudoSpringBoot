@@ -9,16 +9,19 @@ import javax.persistence.Id;
 public class Curso {
 	
 	public Curso() {}
+	
+	public Curso(Long id, String nome, String categoria) {
+		this.id = id;
+		this.nome = nome;
+		this.categoria = categoria;
+	}
+
+
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
 	private String categoria;
-
-	public Curso(String nome, String categoria) {
-		this.nome = nome;
-		this.categoria = categoria;
-	}
 	
 	@Override
 	public int hashCode() {
