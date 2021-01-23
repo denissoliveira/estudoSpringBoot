@@ -5,13 +5,13 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 
-import br.com.estudo.estudospringboot.forum.model.Curso;
-import br.com.estudo.estudospringboot.forum.model.Topico;
+import br.com.estudo.estudospringboot.forum.modelo.Curso;
+import br.com.estudo.estudospringboot.forum.modelo.Topico;
 import br.com.estudo.estudospringboot.forum.repository.CursoRepository;
 
 public class TopicoForm {
 
-	@NotNull @NotEmpty  @Length(min = 5)
+	@NotNull @NotEmpty @Length(min = 5)
 	private String titulo;
 	
 	@NotNull @NotEmpty @Length(min = 10)
@@ -20,24 +20,12 @@ public class TopicoForm {
 	@NotNull @NotEmpty
 	private String nomeCurso;
 
-	public String getTitulo() {
-		return titulo;
-	}
-
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
 
-	public String getMensagem() {
-		return mensagem;
-	}
-
 	public void setMensagem(String mensagem) {
 		this.mensagem = mensagem;
-	}
-
-	public String getNomeCurso() {
-		return nomeCurso;
 	}
 
 	public void setNomeCurso(String nomeCurso) {

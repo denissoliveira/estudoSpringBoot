@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 import org.springframework.data.domain.Page;
 
-import br.com.estudo.estudospringboot.forum.model.Topico;
+import br.com.estudo.estudospringboot.forum.modelo.Topico;
 
 public class TopicoDto {
 
@@ -13,56 +13,31 @@ public class TopicoDto {
 	private String mensagem;
 	private LocalDateTime dataCriacao;
 	
-	public TopicoDto() {}
-	
 	public TopicoDto(Topico topico) {
 		this.id = topico.getId();
 		this.titulo = topico.getTitulo();
 		this.mensagem = topico.getMensagem();
 		this.dataCriacao = topico.getDataCriacao();
 	}
-	
-	public TopicoDto(Long id, String titulo, String mensagem, LocalDateTime dataCriacao) {
-		this.id = id;
-		this.titulo = titulo;
-		this.mensagem = mensagem;
-		this.dataCriacao = dataCriacao;
-	}
 
 	public Long getId() {
 		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getTitulo() {
 		return titulo;
 	}
 
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
-
 	public String getMensagem() {
 		return mensagem;
-	}
-
-	public void setMensagem(String mensagem) {
-		this.mensagem = mensagem;
 	}
 
 	public LocalDateTime getDataCriacao() {
 		return dataCriacao;
 	}
 
-	public void setDataCriacao(LocalDateTime dataCriacao) {
-		this.dataCriacao = dataCriacao;
-	}
-	
 	public static Page<TopicoDto> converter(Page<Topico> topicos) {
 		return topicos.map(TopicoDto::new);
 	}
-	
+
 }
