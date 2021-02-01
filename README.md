@@ -9,7 +9,21 @@
 [![GitHub All Releases](https://img.shields.io/github/downloads/danielso2007/logistic-api/total.svg)](https://github.com/denissoliveira/logistic-api/archive/master.zip)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
-# Estudo Srping Boot
+# Estudo Spring Boot
+
+ Sistema de estudo, CRUD de topicos de um forum.
+
+## Spring boot admin
+
+Sistema de monitoramento para apps springboots
+
+* https://github.com/codecentric/spring-boot-admin
+* Crie um novo projeto - https://start.spring.io/
+* Seguir conforme documentação
+
+## Documentattion
+
+Swagger (FOX) no endereço - `http://localhost:8080/swagger-ui.hml`
 
 ## Conventional Commits
 
